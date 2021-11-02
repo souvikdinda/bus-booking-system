@@ -1,0 +1,182 @@
+body {
+    width: 100%;
+    margin: 0px;
+    font-family: 'Montserrat';
+    /*background-color: #E1F5FE ;*/
+    background-image: url(http://speedlux.com/wp-content/uploads/2016/04/new-york-city-street-wallpaper-city-street-wallpaper-4.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.nav-bar {
+    max-width: 100%;
+    min-width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    position: fixed;   
+    height: 53px; 
+}
+
+.nav-button {
+    display: inline-block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    height: 53px;
+}
+
+.nav-button:hover {
+    background-color: #111;
+}
+
+/*side navigation box */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 53px;
+    left: 0;
+    background: linear-gradient(to right, #03cafc, #00718d);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 40px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #f1f1f1;
+    display: block;
+    
+  }
+  
+  .sidenav a:hover {
+    background-color: #03cafc;
+  }
+  
+
+   
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+  /*search box */
+  .outer-box {
+    width: 1010px;
+    margin: 135px auto 135px auto;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+}
+
+.upper-search-box {
+    background-color: #03cafc;
+    padding: 1px;
+    padding-top: 5px;
+    padding-left: 25px;
+   
+}
+
+.lower-search-box {
+    background-color: white;
+    padding: 15px;
+    
+}
+
+.row-padding {
+    padding: 2px 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.column-padding {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 48%;
+    display: flex;
+}
+
+.column-padding label {
+    font-size: 18px;
+    flex: 2;
+    margin-top: 5px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.column-padding input {
+    font-size: 18px;
+    flex: 5;
+    border: 2px #03cafc solid;
+    border-radius: 4px;
+    padding: 2px;
+    height: 25px;
+    padding-left: 15px;
+    
+}
+
+.column-padding p {
+    font-size: 18px;
+    flex: 6;
+    margin-top: 5px;
+    margin-right: 5px;
+    border-bottom: #03cafc;
+}
+
+.column-padding input:focus {
+    border: 2px #0070b5 solid;
+}
+
+.submit-button {
+    width: 300px;
+    margin: 10px auto 30px auto;
+}
+
+.submit {
+    border: none;
+    background-color: #03cafc;
+    border-radius: 5px;
+    height: 40px;
+    width: 300px;
+    font-size: 21px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #0070b5;
+}
+
+.form-holder {
+    display: flex;
+}
+
+/*Page footer*/
+
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px 20px 30px;
+  background: #1c1c1c;
+}
+
+.footer-info {
+  width: 23%;
+  padding: 20px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 18px; 
+}

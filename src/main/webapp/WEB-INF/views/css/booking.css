@@ -1,0 +1,168 @@
+body {
+    width: 100%;
+    margin: 0px;
+    font-family: 'Montserrat';
+    background-image: url(https://images.wallpaperscraft.com/image/street_puddle_reflection_139688_1280x720.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.nav-bar {
+    max-width: 100%;
+    min-width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    position: fixed;   
+    height: 53px; 
+}
+
+.nav-button {
+    display: inline-block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    height: 53px;
+}
+
+.nav-button:hover {
+    background-color: #111;
+}
+
+/*side navigation box */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 53px;
+    left: 0;
+    background: linear-gradient(to right, #03cafc, #00718d);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 40px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #f1f1f1;
+    display: block;
+    
+  }
+  
+  .sidenav a:hover {
+    background-color: #03cafc;
+  }
+  
+
+   
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+/*Page footer*/
+
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px 20px 30px;
+  background: #1c1c1c;
+  margin-bottom: 0px;
+}
+
+.footer-info {
+  width: 23%;
+  padding: 20px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 18px; 
+}
+
+/*Bus search table*/
+
+.bus-search {
+    display: flex;
+    padding-top: 100px;
+}
+
+table {
+    width: 85%;
+    margin: auto;
+    border-collapse: collapse;
+    padding: 10px;
+    margin-bottom: 75px;
+    font-size: 18px;
+}
+
+th {
+    font-weight: 600;
+    height: 50px;
+    background-color: #03cafc;
+    padding: 15px;
+    text-align: center;
+    /* border: 1px solid black; */
+}
+
+tr {
+    padding: 15px 10px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25),
+    0 1px 0 rgba(0,0,0,0.10);
+}
+
+td {
+    height: 80px;
+    text-align: center;
+}
+
+
+
+.label {
+    flex: 3;
+}
+
+.passengerInput {
+    flex: 5;
+}
+
+.passengerButton {
+    flex: 2;
+}
+
+
+.add:hover {
+    background-color: #0070b5;
+}
+
+.add {
+    border: none;
+    background-color: #03cafc;
+    border-radius: 2px;
+    height: 30px;
+    width: 100px;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+input {
+    font-size: 18px;
+    border: 2px #03cafc solid;
+    border-radius: 4px;
+    padding: 2px;
+    height: 25px;
+    padding-left: 15px;
+}

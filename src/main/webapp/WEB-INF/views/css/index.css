@@ -1,0 +1,184 @@
+body {
+    width: 100%;
+    margin: 0px;
+    font-family: 'Montserrat';
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 15px;
+}
+
+.nav-bar {
+    max-width: 100%;
+    min-width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    position: fixed;   
+    height: 53px; 
+}
+
+.nav-button {
+    display: inline-block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    height: 53px;
+}
+
+.nav-button:hover {
+    background-color: #333;
+}
+
+section {
+    height: 700px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.bg_section1 { background-image: url(https://s3.amazonaws.com/openx-blog/uploads/2018/08/advertisertopics.jpg)}
+.bg_section2 { background-image: url(http://speedlux.com/wp-content/uploads/2016/04/new-york-city-street-wallpaper-city-street-wallpaper-4.jpg)}
+
+article {
+    background-color: aliceblue;
+    padding: 20px 50px 60px 50px; 
+
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.container {
+   
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    width: 32%;
+    padding: 25px;
+    box-sizing: border-box;
+    font-size: 18px;
+
+}
+
+.info:nth-child(1) { background-color: bisque;}
+.info:nth-child(2) { background-color: plum;}
+.info:nth-child(3) { background-color: lightskyblue}
+
+.outer-box {
+    width: 1010px;
+    margin: auto;
+    margin-top: 135px;
+    
+}
+
+.upper-search-box {
+    background-color: #03cafc;
+    padding: 1px;
+    padding-top: 5px;
+    padding-left: 25px;
+   
+}
+
+.lower-search-box {
+    background-color: white;
+    padding: 15px;
+    
+}
+
+.row-padding {
+    padding: 2px 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.column-padding {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 48%;
+    display: flex;
+}
+
+.column-padding label {
+    font-size: 18px;
+    flex: 2;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.column-padding input {
+    font-size: 18px;
+    flex: 5;
+    border: 2px #03cafc solid;
+    border-radius: 4px;
+    padding: 2px;
+    height: 25px;
+    padding-left: 15px;
+    
+}
+
+.column-padding input:focus {
+    border: 2px #0070b5 solid;
+}
+
+.submit-button {
+    width: 300px;
+    margin: 10px auto 30px auto;
+}
+
+.submit {
+    border: none;
+    background-color: #03cafc;
+    border-radius: 5px;
+    height: 40px;
+    width: 300px;
+    font-size: 21px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #0070b5;
+}
+
+.form-holder {
+    display: flex;
+}
+
+.advertisement {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 400px;
+}
+
+.bg_section2 {
+    padding-top: 300px;
+}
+
+.page-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px 20px 30px;
+    background: #1c1c1c;
+}
+
+.footer-info {
+    width: 23%;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+    font-size: 18px; 
+}
+
+
+

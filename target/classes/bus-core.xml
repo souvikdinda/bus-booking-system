@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:ctx="http://www.springframework.org/schema/context"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+        ">
+        
+     
+	
+	<ctx:component-scan base-package="com.brs.dao, com.brs.services, com.brs.entity, com.brs.utility" />
+	
+	<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="username" value="lti" />
+		<property name="password" value="lti123" />
+		<property name="url" value="jdbc:oracle:thin:@192.168.100.110:1521:XE" />
+	</bean>
+	
+	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+			<property  name="packagesToScan" value="com.brs.entity"/>
+			<property name="dataSource" ref="ds" />
+			<property name="jpaVendorAdapter">
+					<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+						<property name="generateDdl" value="false" />
+						<property name="showSql" value="true" />
+					</bean>
+			</property> 
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" /> 
+	</bean>
+	
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	
+	<!-- Spring Email Sender Bean Configuration -->
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="smtp.gmail.com" />
+        <property name="port" value="465" />
+        <property name="username" value="souvik.dinda.sd@gmail.com" />
+        <property name="password" value="11397@Souvik" />
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.debug">true</prop>
+                <prop key="mail.transport.protocol">smtp</prop>
+                <prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
+                <prop key="mail.smtp.socketFactory.port">465</prop>
+                <prop key="mail.smtp.ssl.enable">false</prop>
+                <prop key="mail.smtp.starttls.enable">false</prop>
+            </props>
+        </property>
+    </bean>
+    
+     <!-- Send Email Exception Resolver i.e. In Case Of Exception The Controller Will Navigate To 'error.jsp' & Will Display The Exception Message -->
+    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                <prop key="java.lang.Exception">error</prop>
+            </props>
+        </property>
+    </bean> 
+	
+	</beans>
